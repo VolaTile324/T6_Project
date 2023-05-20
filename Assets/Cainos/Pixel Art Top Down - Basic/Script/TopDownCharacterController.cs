@@ -1,14 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace Cainos.PixelArtTopDown_Basic
 {
     public class TopDownCharacterController : MonoBehaviour
     {
         public float speed;
-        public bool isWindowOpen = false;
+        public bool isInteracting = false;
 
         private Animator animator;
 
@@ -17,28 +16,28 @@ namespace Cainos.PixelArtTopDown_Basic
             animator = GetComponent<Animator>();
         }
 
-        public void ToggleWindowOpen()
+        public void Interacting()
         {
-            if (isWindowOpen == false)
+            if (isInteracting == true)
             {
-                isWindowOpen = true;
+                isInteracting = false;
             }
             else
             {
-                isWindowOpen = false;
+                isInteracting = true;
             }
         }
 
-
         private void Update()
         {
-            Vector2 dir = Vector2.zero;
-            if (isWindowOpen)
+            if (isInteracting)
             {
-                // stop player from any form of movement whenever window is open
                 GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                animator.SetBool("IsMoving", false);
                 return;
             }
+            
+            Vector2 dir = Vector2.zero;
             if (Input.GetKey(KeyCode.A))
             {
                 dir.x = -1;
