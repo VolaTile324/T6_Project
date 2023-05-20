@@ -7,6 +7,7 @@ namespace Cainos.PixelArtTopDown_Basic
     public class TopDownCharacterController : MonoBehaviour
     {
         public float speed;
+        public bool isInteracting = false;
 
         private Animator animator;
 
@@ -15,9 +16,27 @@ namespace Cainos.PixelArtTopDown_Basic
             animator = GetComponent<Animator>();
         }
 
+        public void Interacting()
+        {
+            if (isInteracting == true)
+            {
+                isInteracting = false;
+            }
+            else
+            {
+                isInteracting = true;
+            }
+        }
 
         private void Update()
         {
+            if (isInteracting)
+            {
+                GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                animator.SetBool("IsMoving", false);
+                return;
+            }
+            
             Vector2 dir = Vector2.zero;
             if (Input.GetKey(KeyCode.A))
             {
