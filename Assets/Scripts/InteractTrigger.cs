@@ -1,3 +1,4 @@
+using Cainos.PixelArtTopDown_Basic;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,7 @@ using UnityEngine.Events;
 
 public class InteractTrigger : MonoBehaviour
 {
+    [SerializeField] private TopDownCharacterController character;
     [SerializeField] private GameObject interactPrompt;
     [SerializeField] private UnityEvent onInteract;
 
@@ -19,7 +21,7 @@ public class InteractTrigger : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         // interact prompt follow player position
-        interactPrompt.transform.position = collision.transform.position + new Vector3(0, 1.8f, 0);
+        interactPrompt.transform.position = collision.transform.position + new Vector3(0, 2f, 0);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -32,7 +34,7 @@ public class InteractTrigger : MonoBehaviour
 
     private void Update()
     {
-        if (interactPrompt.activeSelf && Input.GetKeyDown(KeyCode.E))
+        if (character.isInteracting == false && interactPrompt.activeSelf && Input.GetKeyDown(KeyCode.E))
         {
             onInteract.Invoke();
         }
