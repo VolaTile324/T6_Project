@@ -7033,6 +7033,7 @@ GameObject:
   - component: {fileID: 1918451954}
   - component: {fileID: 1918451953}
   - component: {fileID: 1918451952}
+  - component: {fileID: 1918451955}
   m_Layer: 5
   m_Name: HorizontalSoundSettingss
   m_TagString: Untagged
@@ -7126,6 +7127,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1918451950}
   m_CullTransparentMesh: 1
+--- !u!114 &1918451955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918451950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70d9ab028f5521d42ab717b88f7dc422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: 701885913d2ba7d468f5e9b37aee36dc, type: 2}
+  bgmSlider: {fileID: 568582760}
+  sfxSlider: {fileID: 41681958}
 --- !u!1 &1929395546
 GameObject:
   m_ObjectHideFlags: 0
