@@ -11,8 +11,8 @@ public class VolSetting : MonoBehaviour
     [SerializeField] AudioMixer mixer;
     [SerializeField] Slider bgmSlider;
     [SerializeField] Slider sfxSlider;
-    [SerializeField] TMP_Text bgmValue;
-    [SerializeField] TMP_Text sfxValue;
+    // [SerializeField] TMP_Text bgmValue;
+    // [SerializeField] TMP_Text sfxValue;
 
     // Start is called before the first frame update
     private void Start()
@@ -20,13 +20,13 @@ public class VolSetting : MonoBehaviour
         var dbBGM = PlayerPrefs.GetFloat("BGMVolume", 0);
         var volBGM = DBToVolValue(dbBGM);
         mixer.SetFloat("BGMVolume", dbBGM);
-        bgmValue.text = (volBGM * 100).ToString("F0");
+        // bgmValue.text = (volBGM * 100).ToString("F0");
         bgmSlider.SetValueWithoutNotify(volBGM);
 
         var dbSFX = PlayerPrefs.GetFloat("SFXVolume", 0);
         var volSFX = DBToVolValue(dbSFX);
         mixer.SetFloat("SFXVolume", dbSFX);
-        sfxValue.text = (volSFX * 100).ToString("F0");
+        // sfxValue.text = (volSFX * 100).ToString("F0");
         sfxSlider.SetValueWithoutNotify(volSFX);
     }
 
@@ -46,7 +46,7 @@ public class VolSetting : MonoBehaviour
     {
         var db = VolToDBValue(vol);
         mixer.SetFloat("BGMVolume", db);
-        bgmValue.text = (vol * 100).ToString("F0");
+        // bgmValue.text = (vol * 100).ToString("F0");
         PlayerPrefs.SetFloat("BGMVolume", db);
         PlayerPrefs.Save();
     }
@@ -55,7 +55,7 @@ public class VolSetting : MonoBehaviour
     {
         var db = VolToDBValue(vol);
         mixer.SetFloat("SFXVolume", db);
-        sfxValue.text = (vol * 100).ToString("F0");
+        // sfxValue.text = (vol * 100).ToString("F0");
         PlayerPrefs.SetFloat("SFXVolume", db);
         PlayerPrefs.Save();
     }
