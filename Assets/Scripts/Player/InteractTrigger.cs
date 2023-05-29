@@ -3,11 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class InteractTrigger : MonoBehaviour
 {
     [SerializeField] private TopDownCharacterController character;
     [SerializeField] private GameObject interactPrompt;
+    [SerializeField] private Button interactButton;
     [SerializeField] private UnityEvent onInteract;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -15,6 +17,7 @@ public class InteractTrigger : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             interactPrompt.SetActive(true);
+            interactButton.gameObject.SetActive(true);
         }
     }
 
@@ -29,12 +32,13 @@ public class InteractTrigger : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             interactPrompt.SetActive(false);
+            interactButton.gameObject.SetActive(false);
         }
     }
 
-    private void Update()
+    public void InteractCall()
     {
-        if (character.isInteracting == false && interactPrompt.activeSelf && Input.GetKeyDown(KeyCode.E))
+        if (character.isInteracting == false && interactPrompt.activeSelf)
         {
             onInteract.Invoke();
         }
