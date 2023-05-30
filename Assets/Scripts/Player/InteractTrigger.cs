@@ -16,8 +16,12 @@ public class InteractTrigger : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            //safety measure in listener check
+            interactButton.onClick.RemoveListener(InteractCall);
+
             interactPrompt.SetActive(true);
             interactButton.gameObject.SetActive(true);
+            interactButton.onClick.AddListener(InteractCall);
         }
     }
 
@@ -33,6 +37,7 @@ public class InteractTrigger : MonoBehaviour
         {
             interactPrompt.SetActive(false);
             interactButton.gameObject.SetActive(false);
+            interactButton.onClick.RemoveListener(InteractCall);
         }
     }
 
