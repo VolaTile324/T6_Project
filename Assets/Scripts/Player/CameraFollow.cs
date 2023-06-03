@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Cainos.PixelArtTopDown_Basic
+namespace Hex.TopDownGame
 {
     //let camera follow target
     public class CameraFollow : MonoBehaviour

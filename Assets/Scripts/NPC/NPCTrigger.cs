@@ -1,32 +1,39 @@
-using Cainos.PixelArtTopDown_Basic;
+using Hex.TopDownGame;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 
-public class ChatTrigger : MonoBehaviour
+public class NPCTrigger : MonoBehaviour
 {
-    // todo : NPC class
-    // [SerializeField] private NPC npcCharacter;
+    [SerializeField] private GameObject npcCharacter;
     [SerializeField] private TopDownCharacterController playerCharacter;
-    [SerializeField] private GameObject chatPrompt;
     [SerializeField] private Button chatButton;
+    [SerializeField] private GameObject chatPrompt;
+    [SerializeField] private bool hasDialog;
+    [SerializeField] private DialogData data;
     [SerializeField] private UnityEvent onInteract;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
+            //safety measure in listener check
+            chatButton.onClick.RemoveListener(InteractCall);
+
             chatPrompt.SetActive(true);
             chatButton.gameObject.SetActive(true);
+            chatButton.onClick.AddListener(InteractCall);
+            DialogueManager.Instance.DialogData = data;
         }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         // chat prompt stick to npc position
-        // chatPrompt.transform.position = npcCharacter.transform.position + new Vector3(0, 2f, 0);
+        chatPrompt.transform.position = npcCharacter.transform.position + new Vector3(0, 2f, 0);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -35,13 +42,15 @@ public class ChatTrigger : MonoBehaviour
         {
             chatPrompt.SetActive(false);
             chatButton.gameObject.SetActive(false);
+            chatButton.onClick.RemoveListener(InteractCall);
         }
     }
 
     public void InteractCall()
     {
-        if (playerCharacter.isInteracting == false && chatPrompt.activeSelf)
+        if (playerCharacter.IsInteracting == false && chatPrompt.activeSelf)
         {
+            playerCharacter.Interacting();
             onInteract.Invoke();
         }
     }

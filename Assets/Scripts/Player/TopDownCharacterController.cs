@@ -1,16 +1,23 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
-namespace Cainos.PixelArtTopDown_Basic
+namespace Hex.TopDownGame
 {
     public class TopDownCharacterController : MonoBehaviour
     {
+        [SerializeField] private DialogData data;
         public float speed;
         public VariableJoystick joystick;
-        public bool isInteracting = false;
+        private bool isInteracting = false;
 
         private Animator animator;
+
+        public DialogData plData { get => data; }
+        public bool IsInteracting { get => isInteracting; }
 
         private void Start()
         {
@@ -29,43 +36,10 @@ namespace Cainos.PixelArtTopDown_Basic
             }
         }
 
-        /* private void Update()
+        public void Unfreeze()
         {
-            if (isInteracting)
-            {
-                GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-                animator.SetBool("IsMoving", false);
-                return;
-            }
-            
-            Vector2 dir = Vector2.zero;
-            if (Input.GetKey(KeyCode.A))
-            {
-                dir.x = -1;
-                animator.SetInteger("Direction", 3);
-            }
-            else if (Input.GetKey(KeyCode.D))
-            {
-                dir.x = 1;
-                animator.SetInteger("Direction", 2);
-            }
-
-            if (Input.GetKey(KeyCode.W))
-            {
-                dir.y = 1;
-                animator.SetInteger("Direction", 1);
-            }
-            else if (Input.GetKey(KeyCode.S))
-            {
-                dir.y = -1;
-                animator.SetInteger("Direction", 0);
-            }
-
-            dir.Normalize();
-            animator.SetBool("IsMoving", dir.magnitude > 0);
-
-            GetComponent<Rigidbody2D>().velocity = speed * dir;
-        } */
+            isInteracting = false;
+        }
 
         private void Update()
         {
