@@ -50,7 +50,7 @@ public class NPCTrigger : MonoBehaviour
     {
         if (playerCharacter.IsInteracting == false && chatPrompt.activeSelf)
         {
-            playerCharacter.Interacting();
+            playerCharacter.Freeze();
             onInteract.Invoke();
         }
     }

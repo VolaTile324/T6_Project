@@ -24,16 +24,9 @@ namespace Hex.TopDownGame
             animator = GetComponent<Animator>();
         }
 
-        public void Interacting()
+        public void Freeze()
         {
-            if (isInteracting == true)
-            {
-                isInteracting = false;
-            }
-            else
-            {
-                isInteracting = true;
-            }
+            isInteracting = true;
         }
 
         public void Unfreeze()

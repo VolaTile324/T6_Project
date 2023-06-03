@@ -45,7 +45,7 @@ public class InteractTrigger : MonoBehaviour
     {
         if (playerCharacter.IsInteracting == false && interactPrompt.activeSelf)
         {
-            playerCharacter.Interacting();
+            playerCharacter.Freeze();
             onInteract.Invoke();
         }
     }

@@ -63,7 +63,7 @@ public class DialogueManager : MonoBehaviour
         else
         {
             _dialogBox.SetActive(false);
-            player.Interacting();
+            player.Unfreeze();
         }
     }
 
@@ -87,7 +87,7 @@ public class DialogueManager : MonoBehaviour
         else
         {
             _dialogBox.SetActive(false);
-            player.Interacting();
+            player.Unfreeze();
         }
     }
 
