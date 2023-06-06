@@ -15,6 +15,8 @@ public class DialogueTextEditor : Editor
     SerializedProperty answers;
     SerializedProperty canSkipIndex;
     SerializedProperty nextIndex;
+    SerializedProperty canTriggerEvent;
+    SerializedProperty dialogEvent;
 
     void OnEnable()
     {
@@ -24,6 +26,8 @@ public class DialogueTextEditor : Editor
         answers = serializedObject.FindProperty("answers");
         canSkipIndex = serializedObject.FindProperty("canSkipIndex");
         nextIndex = serializedObject.FindProperty("nextIndex");
+        canTriggerEvent = serializedObject.FindProperty("canTriggerEvent");
+        dialogEvent = serializedObject.FindProperty("dialogEvent");
     }
 
     public override void OnInspectorGUI()
@@ -41,6 +45,11 @@ public class DialogueTextEditor : Editor
         if (dialogText.canSkipIndex)
         {
             EditorGUILayout.PropertyField (nextIndex, true);
+        }
+        EditorGUILayout.PropertyField(canTriggerEvent);
+        if (dialogText.canTriggerEvent)
+        {
+            EditorGUILayout.PropertyField(dialogEvent, true);
         }
         serializedObject.ApplyModifiedProperties();
     }

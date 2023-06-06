@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 [Serializable]
 
@@ -15,4 +16,6 @@ public class DialogText : MonoBehaviour
     public Button[] answers;
     public bool canSkipIndex;
     public int nextIndex;
+    public bool canTriggerEvent;
+    public UnityEvent dialogEvent;
 }

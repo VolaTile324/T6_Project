@@ -108,6 +108,11 @@ public class DialogueManager : MonoBehaviour
     public void CanSkipCheck()
     {
         _continueButton.onClick.RemoveAllListeners();
+        if (DialogData.texts[dialogIndex].canTriggerEvent)
+        {
+            _continueButton.onClick.AddListener(DialogEventTrigger);
+        }
+
         if (DialogData.texts[dialogIndex].canSkipIndex)
         {
             _continueButton.onClick.AddListener(SkipToDialog);
@@ -119,5 +124,8 @@ public class DialogueManager : MonoBehaviour
         _continueButton.gameObject.SetActive(true);
     }
 
-
+    public void DialogEventTrigger()
+    {
+        DialogData.texts[dialogIndex].dialogEvent.Invoke();
+    }
 }

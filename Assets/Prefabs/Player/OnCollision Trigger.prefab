@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2316965292555926067}
-  - component: {fileID: 6912415037378191789}
-  - component: {fileID: 534474651193283330}
+  - component: {fileID: 148169713342375694}
+  - component: {fileID: 41412746595218502}
   m_Layer: 0
-  m_Name: Interact Trigger
+  m_Name: OnCollision Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,7 +33,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &6912415037378191789
+--- !u!61 &148169713342375694
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -59,7 +59,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &534474651193283330
+--- !u!114 &41412746595218502
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -68,12 +68,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 4296514668317294960}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07adc72d3e44c4b4ab0d6cb1394771fe, type: 3}
+  m_Script: {fileID: 11500000, guid: 3460bdf577eecc346b251f4aa0241fd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCharacter: {fileID: 0}
-  interactPrompt: {fileID: 0}
-  interactButton: {fileID: 0}
-  onInteract:
+  triggerOnce: 0
+  triggerOnEnter: 1
+  triggerOnExit: 0
+  triggerOnStay: 0
+  triggerTarget:
     m_PersistentCalls:
       m_Calls: []
