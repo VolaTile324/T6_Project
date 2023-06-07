@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class TeleportTrigger : MonoBehaviour
 {
-    [SerializeField] private VariableJoystick joystick;
     [SerializeField] private TopDownCharacterController playerCharacter;
     [SerializeField] private TeleportDestination teleportDestination;
     [SerializeField] private float teleportTime = 1;
