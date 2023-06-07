@@ -22,6 +22,14 @@ namespace Hex.TopDownGame
         private void Start()
         {
             animator = GetComponent<Animator>();
+            if (PlayerPrefs.HasKey("CharName"))
+            {
+                plData.characterName = PlayerPrefs.GetString("CharName", "Doe");
+            }
+            else
+            {
+                plData.characterName = "Doe";
+            }
         }
 
         public void Freeze()
