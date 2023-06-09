@@ -24,10 +24,23 @@ public class SelectedLevelTarget : MonoBehaviour
         
         selectedLevelTemplate.LoadLevelButton.onClick.RemoveAllListeners();
         selectedLevelTemplate.LoadLevelButton.onClick.AddListener(SceneNumSet);
+        if (PlayerPrefs.GetInt(targetLevel + "Continue", 0) == 1)
+        {
+            selectedLevelTemplate.RestartButton.gameObject.SetActive(true);
+            selectedLevelTemplate.RestartAcceptButton.onClick.RemoveAllListeners();
+            selectedLevelTemplate.RestartAcceptButton.onClick.AddListener(ResetLevel);
+            selectedLevelTemplate.LoadLevelButton.GetComponentInChildren<TMP_Text>().text = "CONTINUE";
+        }
     }
 
     public void SceneNumSet()
     {
         levelLoader.LoadLevel("Level " + targetLevel);
+    }
+
+    public void ResetLevel()
+    {
+        PlayerPrefs.SetInt(targetLevel + "Continue", 0);
+        SceneNumSet();
     }
 }

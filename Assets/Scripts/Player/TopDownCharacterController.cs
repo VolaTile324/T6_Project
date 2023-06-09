@@ -19,6 +19,11 @@ namespace Hex.TopDownGame
         public DialogData plData { get => data; }
         public bool IsInteracting { get => isInteracting; }
 
+        private void Awake()
+        {
+            Unfreeze();
+        }
+
         private void Start()
         {
             animator = GetComponent<Animator>();

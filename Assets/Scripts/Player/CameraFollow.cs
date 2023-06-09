@@ -18,6 +18,7 @@ namespace Hex.TopDownGame
         {
             if (target == null) return;
 
+            transform.position = target.position;
             offset = transform.position - target.position;
         }
 
