@@ -26,7 +26,11 @@ public class ChatTrigger : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         // chat prompt stick to npc position
+<<<<<<< Updated upstream:Assets/Scripts/Player/ChatTrigger.cs
         // chatPrompt.transform.position = npcCharacter.transform.position + new Vector3(0, 2f, 0);
+=======
+        chatPrompt.transform.position = npcCharacter.transform.position + new Vector3(0, 1f, 0);
+>>>>>>> Stashed changes:Assets/Scripts/NPC/NPCTrigger.cs
     }
 
     private void OnTriggerExit2D(Collider2D collision)
