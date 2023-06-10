@@ -15,6 +15,7 @@ namespace Hex.TopDownGame
         private bool isInteracting = false;
 
         private Animator animator;
+        private Vector2 lastDir;
 
         public DialogData plData { get => data; }
         public bool IsInteracting { get => isInteracting; }
@@ -58,27 +59,52 @@ namespace Hex.TopDownGame
 
             // create movement based on joystick
             Vector2 dir = Vector2.up * joystick.Vertical + Vector2.right * joystick.Horizontal;
-            if (dir.x == -1)
-            {
-                animator.SetInteger("Direction", 3);
-            }
-            else if (dir.x == 1)
-            {
-                animator.SetInteger("Direction", 2);
-            }
-            if (dir.y == 1)
-            {
-                animator.SetInteger("Direction", 1);
-            }
-            else if (dir.y == -1)
-            {
-                animator.SetInteger("Direction", 0);
-            }
-            
             dir.Normalize();
-            animator.SetBool("IsMoving", dir.magnitude > 0);
+            GetComponent<Rigidbody2D>().velocity = dir * speed;
 
-            GetComponent<Rigidbody2D>().velocity = speed * dir;
+            // set animation
+            if (GetComponent<Rigidbody2D>().velocity == Vector2.zero)
+            {
+                if (lastDir.x == -1)
+                {
+                    animator.Play("PLIdleSide");
+                }
+                else if (lastDir.x == 1)
+                {
+                    animator.Play("PLIdleSideR");
+                }
+                else if (lastDir.y == 1)
+                {
+                    animator.Play("PLIdleBack");
+                }
+                else if (lastDir.y == -1)
+                {
+                    animator.Play("PLIdleFront");
+                }
+            }
+            if (GetComponent<Rigidbody2D>().velocity != Vector2.zero)
+            {
+                if (dir.x == -1)
+                {
+                    animator.Play("PLMoveSide");
+                    lastDir = dir;
+                }
+                else if (dir.x == 1)
+                {
+                    animator.Play("PLMoveSideR");
+                    lastDir = dir;
+                }
+                else if (dir.y == 1)
+                {
+                    animator.Play("PLMoveBack");
+                    lastDir = dir;
+                }
+                else if (dir.y == -1)
+                {
+                    animator.Play("PLMoveFront");
+                    lastDir = dir;
+                }
+            }
         }
     }
 }
