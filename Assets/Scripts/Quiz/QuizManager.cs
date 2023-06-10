@@ -9,6 +9,8 @@ public class QuizManager : MonoBehaviour
     [SerializeField] GameObject quizPromptPanel;
     [SerializeField] GameObject quizStartPanel;
     [SerializeField] GameObject quizFinishPanel;
+    [SerializeField] GameObject feedbackPanel;
+    [SerializeField] TMP_Text feedbackText;
     [SerializeField] TMP_Text questionText;
     [SerializeField] TMP_Text[] answerTexts;
     [SerializeField] TMP_Text quizFinishText;
@@ -47,18 +49,28 @@ public class QuizManager : MonoBehaviour
         correctAnswer = quizDatas[currentQuizIndex].correctAnswer;
     }
 
+    //cek jawaban, setiap pilihan jawaban memiliki feedback masing" jd pada string feedbacks itu ada 4 feedback
     public void CheckAnswer(int answerIndex)
     {
         if (answerIndex == correctAnswer)
         {
             Debug.Log("Correct");
             score++;
+            feedbackText.text = quizDatas[currentQuizIndex].feedbacks[answerIndex];
         }
         else
         {
             Debug.Log("Wrong");
+            feedbackText.text = quizDatas[currentQuizIndex].feedbacks[answerIndex];
         }
+        feedbackPanel.SetActive(true);
+    }
+
+    //lanjut ke soal berikutnya
+    public void NextQuestion()
+    {
         currentQuizIndex++;
+        feedbackPanel.SetActive(false);
         if (currentQuizIndex < quizDatas.Length)
         {
             SetQuiz();
@@ -72,5 +84,36 @@ public class QuizManager : MonoBehaviour
             quizFinishText.text = "You got " + score + " out of " + quizDatas.Length + " correct!";
         }
     }
+
+
+    
+
+    
+
+    // public void CheckAnswer(int answerIndex)
+    // {
+    //     if (answerIndex == correctAnswer)
+    //     {
+    //         Debug.Log("Correct");
+    //         score++;
+    //     }
+    //     else
+    //     {
+    //         Debug.Log("Wrong");
+    //     }
+    //     currentQuizIndex++;
+    //     if (currentQuizIndex < quizDatas.Length)
+    //     {
+    //         SetQuiz();
+    //     }
+    //     else
+    //     {
+    //         Debug.Log("Quiz Finished");
+    //         quizPromptPanel.SetActive(false);
+    //         quizStartPanel.SetActive(false);
+    //         quizFinishPanel.SetActive(true);
+    //         quizFinishText.text = "You got " + score + " out of " + quizDatas.Length + " correct!";
+    //     }
+    // }
     
 }

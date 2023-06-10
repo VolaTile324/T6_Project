@@ -5733,6 +5733,111 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 421680743}
   m_CullTransparentMesh: 1
+--- !u!1 &422303469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 422303470}
+  - component: {fileID: 422303473}
+  - component: {fileID: 422303472}
+  - component: {fileID: 422303471}
+  m_Layer: 5
+  m_Name: FeedbackBg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &422303470
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422303469}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1982332425}
+  - {fileID: 1539210335}
+  m_Father: {fileID: 1737238127}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1004.5, y: -540}
+  m_SizeDelta: {x: 1400, y: 800}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &422303471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422303469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 64926f3b00409c4469e872c420295785, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &422303472
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422303469}
+  m_CullTransparentMesh: 1
+--- !u!114 &422303473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422303469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 50
+    m_Right: 50
+    m_Top: 50
+    m_Bottom: 100
+  m_ChildAlignment: 4
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1001 &431473159
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6289,6 +6394,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1336798052}
+  - {fileID: 1737238127}
   m_Father: {fileID: 1935642423}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11159,6 +11265,82 @@ Canvas:
   m_SortingLayerID: -105541197
   m_SortingOrder: 4
   m_TargetDisplay: 0
+--- !u!1 &742942052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 742942053}
+  - component: {fileID: 742942055}
+  - component: {fileID: 742942054}
+  m_Layer: 5
+  m_Name: Outline
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &742942053
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742942052}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1737238127}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1420, y: 820}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &742942054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742942052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.75294125, g: 0.95294124, b: 0.9058824, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 759ffe785a9e4f445bf6996f6980043e, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &742942055
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742942052}
+  m_CullTransparentMesh: 1
 --- !u!1 &755380932
 GameObject:
   m_ObjectHideFlags: 0
@@ -11840,6 +12022,142 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 787103904}
+  m_CullTransparentMesh: 1
+--- !u!1 &805947916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 805947917}
+  - component: {fileID: 805947919}
+  - component: {fileID: 805947918}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &805947917
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805947916}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1539210335}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &805947918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805947916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Next Question
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: ce7923e1f0a2b4449a68edaafa09352b, type: 2}
+  m_sharedMaterial: {fileID: 5365491767850636562, guid: ce7923e1f0a2b4449a68edaafa09352b,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 50
+  m_fontSizeBase: 50
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &805947919
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805947916}
   m_CullTransparentMesh: 1
 --- !u!1 &814175400
 GameObject:
@@ -23083,6 +23401,140 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f952991b42b0d44b8b9b6a6b8ffb662, type: 3}
+--- !u!1 &1539210334
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1539210335}
+  - component: {fileID: 1539210338}
+  - component: {fileID: 1539210337}
+  - component: {fileID: 1539210336}
+  m_Layer: 5
+  m_Name: ButtonNextQuestion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1539210335
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539210334}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 805947917}
+  m_Father: {fileID: 422303470}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 700, y: -675}
+  m_SizeDelta: {x: 500, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1539210336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539210334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1539210337}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1935642424}
+        m_TargetAssemblyTypeName: QuizManager, Assembly-CSharp
+        m_MethodName: NextQuestion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1539210337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539210334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.75294125, g: 0.95294124, b: 0.9058824, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 88a4dc741afb9b049b9e5528a419349b, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1539210338
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539210334}
+  m_CullTransparentMesh: 1
 --- !u!1 &1542550417
 GameObject:
   m_ObjectHideFlags: 0
@@ -25279,6 +25731,84 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1732648329}
+  m_CullTransparentMesh: 1
+--- !u!1 &1737238126
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1737238127}
+  - component: {fileID: 1737238129}
+  - component: {fileID: 1737238128}
+  m_Layer: 5
+  m_Name: FeedbackPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1737238127
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737238126}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 742942053}
+  - {fileID: 422303470}
+  m_Father: {fileID: 444830064}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1737238128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737238126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1737238129
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737238126}
   m_CullTransparentMesh: 1
 --- !u!1 &1745825800
 GameObject:
@@ -27602,6 +28132,8 @@ MonoBehaviour:
   quizPromptPanel: {fileID: 2140191988}
   quizStartPanel: {fileID: 444830063}
   quizFinishPanel: {fileID: 481796944}
+  feedbackPanel: {fileID: 1737238126}
+  feedbackText: {fileID: 1982332426}
   questionText: {fileID: 1747988659}
   answerTexts:
   - {fileID: 1846966785}
@@ -27617,6 +28149,19 @@ MonoBehaviour:
     - Sharing personal data with others
     - Ignoring online threats
     correctAnswer: 0
+    feedbacks:
+    - Correct! Privacy protection aims to ensure that personal information is kept
+      confidential and secure, preventing unauthorized access or misuse.
+    - Incorrect. Privacy protection focuses on safeguarding personal information,
+      not on increasing online visibility. It's about controlling what information
+      is shared and who has access to it.
+    - Incorrect. Privacy protection is about limiting the sharing of personal data
+      and being cautious about who has access to it. It emphasizes the importance
+      of informed consent and controlling the dissemination of personal information.
+    - Incorrect. Privacy protection is about being aware of and actively addressing
+      online threats to personal information. It involves taking proactive measures
+      to safeguard privacy and prevent unauthorized access or data breaches. Ignoring
+      online threats can put personal information at risk.
   - question: What does data encryption do?
     answers:
     - Converts data into a format that cannot be easily understood
@@ -27624,6 +28169,20 @@ MonoBehaviour:
     - Increases the speed of data transfer
     - Protects against spam emails
     correctAnswer: 0
+    feedbacks:
+    - Correct! Data encryption involves transforming data into an unreadable form
+      using cryptographic algorithms. This ensures that even if the data is intercepted,
+      it cannot be easily understood or accessed without the decryption key.
+    - Incorrect. Data encryption does not involve removing sensitive information
+      from files. Instead, it focuses on securing the information by transforming
+      it into an encrypted format.
+    - Incorrect. Data encryption may have a slight impact on data transfer speed
+      due to the additional processing required for encryption and decryption. However,
+      the primary purpose of data encryption is not to increase data transfer speed
+      but to ensure the security and confidentiality of the data.
+    - Incorrect. Data encryption is not directly related to protecting against spam
+      emails. It is a technique used to secure data, while protection against spam
+      emails involves other measures such as spam filters and email authentication.
   - question: What is the purpose of two-factor authentication (2FA)?
     answers:
     - To create complex passwords
@@ -27631,6 +28190,20 @@ MonoBehaviour:
     - To secure online transactions
     - To add an extra layer of security to the login process
     correctAnswer: 3
+    feedbacks:
+    - Incorrect. Two-factor authentication (2FA) is not specifically related to creating
+      complex passwords. It is an additional security measure that supplements the
+      password-based login process.
+    - Incorrect. While two-factor authentication (2FA) can provide an extra layer
+      of security, its primary purpose is not to protect against malware. Malware
+      protection typically involves antivirus software and other security measures.
+    - Incorrect. Two-factor authentication (2FA) can enhance the security of online
+      transactions by adding an extra layer of verification. However, its purpose
+      is not limited to securing online transactions alone.
+    - Correct! Two-factor authentication (2FA) is designed to provide an additional
+      layer of security to the login process. It requires users to provide two forms
+      of identification, typically a password and a unique verification code or token,
+      to verify their identity.
   - question: Why is it important to avoid using personal information in passwords?
     answers:
     - Personal information is difficult to remember
@@ -27638,6 +28211,23 @@ MonoBehaviour:
     - Personal information can improve online security
     - Personal information makes passwords stronger
     correctAnswer: 1
+    feedbacks:
+    - Incorrect. Personal information is often easy to remember, but using it in
+      passwords is not recommended due to security reasons.
+    - Correct! Using personal information in passwords, such as names, birthdates,
+      or addresses, is highly discouraged because it is easily guessable by others.
+      Hackers and attackers can easily gather personal information from social media
+      or other sources, making it easier for them to crack passwords that include
+      personal details.
+    - Incorrect. Using personal information in passwords does not necessarily improve
+      online security. In fact, it can make passwords more vulnerable to hacking
+      attempts.Incorrect. Using personal information in passwords does not necessarily
+      improve online security. In fact, it can make passwords more vulnerable to
+      hacking attempts.
+    - Incorrect. While personal information might seem like it could make passwords
+      stronger, it actually increases the risk of passwords being compromised. Hackers
+      often try to guess passwords using common personal information, so it's best
+      to avoid using personal details in passwords.
   - question: What is the purpose of regularly updating your software and operating
       systems?
     answers:
@@ -27646,6 +28236,19 @@ MonoBehaviour:
     - To fix security vulnerabilities
     - To enhance user interface
     correctAnswer: 2
+    feedbacks:
+    - Incorrect. While software updates can sometimes include improvements in ad-blocking
+      or ad-related features, their primary purpose is not specifically focused on
+      removing unwanted advertisements.
+    - Partially correct. Software updates can sometimes include performance enhancements,
+      but their primary purpose is not solely to improve computer performance.
+    - Correct! One of the main reasons for regularly updating software and operating
+      systems is to patch and fix any security vulnerabilities that may have been
+      discovered. Hackers and cybercriminals are constantly looking for vulnerabilities
+      to exploit, so keeping your software up to date helps protect your system from
+      potential attacks.
+    - Incorrect. While software updates may include user interface improvements,
+      their primary purpose is not solely focused on enhancing the user interface.
   - question: Which of the following is a common example of a phishing attack?
     answers:
     - Pop-up ads on websites
@@ -27653,6 +28256,19 @@ MonoBehaviour:
     - Phone calls from unknown numbers
     - Fake login pages to steal usernames and passwords
     correctAnswer: 3
+    feedbacks:
+    - Incorrect. Pop-up ads on websites may be annoying or intrusive, but they are
+      not necessarily a phishing attack. Phishing attacks typically involve deceptive
+      tactics to trick individuals into revealing their sensitive information.
+    - Incorrect. Viruses spread through email attachments refer to a different type
+      of cyber threat called malware. While malware can be harmful, it is not specific
+      to phishing attacks.
+    - Incorrect. Phone calls from unknown numbers may be associated with various
+      types of scams, but they do not specifically represent a phishing attack.
+    - Correct! This is a common example of a phishing attack. Phishing attacks often
+      involve creating fraudulent websites or login pages that mimic legitimate ones,
+      tricking users into entering their usernames and passwords. The attackers then
+      capture this information for malicious purposes.
   - question: You receive an email claiming to be from your bank, asking for your
       account information and password. What should you do?
     answers:
@@ -27661,6 +28277,20 @@ MonoBehaviour:
     - Delete the email and contact your bank directly
     - Provide the requested information
     correctAnswer: 2
+    feedbacks:
+    - Incorrect. Replying to the email and providing your information can expose
+      you to potential identity theft or fraud. Legitimate organizations, such as
+      banks, will never ask for sensitive information via email.
+    - Incorrect. Clicking on links in suspicious emails can lead to malicious websites
+      or downloads. It's best to avoid clicking on any links unless you are certain
+      of their legitimacy.
+    - Correct! This is the recommended action. If you receive an email asking for
+      your account information and password, it's important to delete the email immediately.
+      Instead of responding to the email, contact your bank directly using their
+      official website or phone number to verify the legitimacy of the request.
+    - Incorrect. Providing the requested information can put your personal and financial
+      data at risk. Legitimate organizations will not ask for sensitive information
+      via email, so it's crucial to avoid sharing such details.
   - question: Which of the following is an example of personally identifiable information
       (PII)?
     answers:
@@ -27669,13 +28299,20 @@ MonoBehaviour:
     - Pet's name
     - Favorite movie
     correctAnswer: 0
-  - question: What is the purpose of clearing your browser cookies?
-    answers:
-    - To remove unwanted advertisements
-    - To improve website loading speed
-    - To delete stored passwords
-    - To protect your browsing history and online activities
-    correctAnswer: 3
+    feedbacks:
+    - Correct! Date of birth is an example of personally identifiable information
+      (PII) because it can be used to identify an individual and is often used for
+      authentication or verification purposes.Correct! Date of birth is an example
+      of personally identifiable information (PII) because it can be used to identify
+      an individual and is often used for authentication or verification purposes.
+    - Incorrect. Favorite color is not typically considered personally identifiable
+      information (PII) as it does not directly identify an individual.
+    - Incorrect. While pet's name can be personal and meaningful to an individual,
+      it is not generally considered personally identifiable information (PII) as
+      it does not directly identify an individual.
+    - Incorrect. Like favorite color, favorite movie is not typically considered
+      personally identifiable information (PII) as it does not directly identify
+      an individual.
   - question: Which of the following is a secure password practice?
     answers:
     - Using a common word as a password
@@ -27683,6 +28320,20 @@ MonoBehaviour:
     - Including a combination of letters, numbers, and symbols
     - Writing down the password on a sticky note
     correctAnswer: 2
+    feedbacks:
+    - Incorrect. Using a common word as a password is not a secure practice because
+      it can be easily guessed by attackers using dictionary-based or brute-force
+      methods.
+    - Incorrect. Reusing the same password for multiple accounts is risky because
+      if one account is compromised, all your other accounts are at risk as well.
+      It's best to use unique passwords for each account.
+    - Correct. Including a combination of letters (both uppercase and lowercase),
+      numbers, and symbols in your password makes it stronger and more difficult
+      to guess or crack.
+    - Incorrect. Writing down passwords on a sticky note or any physical medium can
+      be easily accessed or seen by others, compromising the security of your accounts.
+      It's recommended to use a secure password manager to store and manage your
+      passwords instead.
 --- !u!4 &1941264342 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3352065052677507650, guid: eae21ce282b34c746b9c37bcf9686f2a,
@@ -27913,6 +28564,142 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 513297989}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1982332424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1982332425}
+  - component: {fileID: 1982332427}
+  - component: {fileID: 1982332426}
+  m_Layer: 5
+  m_Name: FeedbackText (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1982332425
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982332424}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 422303470}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 700, y: -325}
+  m_SizeDelta: {x: 1200, y: 500}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1982332426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982332424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: New Text
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: ce7923e1f0a2b4449a68edaafa09352b, type: 2}
+  m_sharedMaterial: {fileID: 5365491767850636562, guid: ce7923e1f0a2b4449a68edaafa09352b,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 40
+  m_fontSizeBase: 40
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1982332427
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982332424}
+  m_CullTransparentMesh: 1
 --- !u!1 &1988349627
 GameObject:
   m_ObjectHideFlags: 0
