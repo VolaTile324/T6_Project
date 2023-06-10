@@ -1239,11 +1239,7 @@ Tilemap:
   m_GameObject: {fileID: 164286783}
   m_Enabled: 1
   m_Tiles:
-<<<<<<< Updated upstream
-  - first: {x: -16, y: -8, z: 0}
-=======
   - first: {x: -16, y: -10, z: 0}
->>>>>>> Stashed changes
     second:
       serializedVersion: 2
       m_TileIndex: 18
@@ -1899,17 +1895,10 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 10
     m_Data: {fileID: 11400000, guid: a936cc0874bffa04fa79c3ecb7395792, type: 2}
-<<<<<<< Updated upstream
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-=======
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 719425e53a07d1d4299258d71915f906, type: 2}
   - m_RefCount: 7
     m_Data: {fileID: 11400000, guid: 88646778dec300d429112b9c9a2e43df, type: 2}
->>>>>>> Stashed changes
   - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 8699473c448b3e548ad0bb8d5526ce95, type: 2}
   - m_RefCount: 16
@@ -1947,17 +1936,10 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 10
     m_Data: {fileID: 1281584089, guid: e94d238e911ba6c438fc50376ddf6489, type: 3}
-<<<<<<< Updated upstream
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-=======
   - m_RefCount: 2
     m_Data: {fileID: -135181157, guid: e94d238e911ba6c438fc50376ddf6489, type: 3}
   - m_RefCount: 7
     m_Data: {fileID: -1665379791, guid: e94d238e911ba6c438fc50376ddf6489, type: 3}
->>>>>>> Stashed changes
   - m_RefCount: 3
     m_Data: {fileID: 681787560, guid: e94d238e911ba6c438fc50376ddf6489, type: 3}
   - m_RefCount: 16
@@ -1971,11 +1953,7 @@ Tilemap:
   - m_RefCount: 3
     m_Data: {fileID: 1447757721, guid: e94d238e911ba6c438fc50376ddf6489, type: 3}
   m_TileMatrixArray:
-<<<<<<< Updated upstream
-  - m_RefCount: 64
-=======
   - m_RefCount: 63
->>>>>>> Stashed changes
     m_Data:
       e00: 1
       e01: 0
@@ -1994,22 +1972,13 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-<<<<<<< Updated upstream
-  - m_RefCount: 64
-=======
   - m_RefCount: 63
->>>>>>> Stashed changes
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-<<<<<<< Updated upstream
-  m_Origin: {x: -17, y: -8, z: 0}
-  m_Size: {x: 19, y: 18, z: 1}
-=======
   m_Origin: {x: -17, y: -10, z: 0}
   m_Size: {x: 19, y: 20, z: 1}
->>>>>>> Stashed changes
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -5893,6 +5862,7 @@ GameObject:
   - component: {fileID: 481529199}
   - component: {fileID: 481529198}
   - component: {fileID: 481529197}
+  - component: {fileID: 481529200}
   m_Layer: 5
   m_Name: ButtonClose
   m_TagString: Untagged
@@ -6001,6 +5971,18 @@ MonoBehaviour:
           m_StringArgument: ' Interact with the PC in your room'
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1905388098}
+        m_TargetAssemblyTypeName: LevelStateSave, Assembly-CSharp
+        m_MethodName: SaveCurrentStateList
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Quiz Finished
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &481529198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6039,6 +6021,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 481529195}
   m_CullTransparentMesh: 1
+--- !u!114 &481529200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481529195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e11682616947d742a0925501630dc03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveManager: {fileID: 1905388098}
+  onLevelLoaded:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1935642422}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  keyName: Quiz Finished
 --- !u!1 &481796944
 GameObject:
   m_ObjectHideFlags: 0
@@ -11052,6 +11063,7 @@ GameObject:
   m_Component:
   - component: {fileID: 888095675}
   - component: {fileID: 888095676}
+  - component: {fileID: 888095677}
   m_Layer: 20
   m_Name: Dummy Diag (10)
   m_TagString: Untagged
@@ -11133,6 +11145,59 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1905388098}
+        m_TargetAssemblyTypeName: LevelStateSave, Assembly-CSharp
+        m_MethodName: SaveCurrentStateList
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Brother Finsihed
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &888095677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888095674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e11682616947d742a0925501630dc03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveManager: {fileID: 1905388098}
+  onLevelLoaded:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1445743809}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 665715160}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  keyName: Brother Finsihed
 --- !u!1 &892323915
 GameObject:
   m_ObjectHideFlags: 0
@@ -13029,6 +13094,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1155615465}
   - component: {fileID: 1155615466}
+  - component: {fileID: 1155615467}
   m_Layer: 20
   m_Name: Dummy Diag (12)
   m_TagString: Untagged
@@ -13122,6 +13188,59 @@ MonoBehaviour:
           m_StringArgument: ' Interact with the PC in your room'
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1905388098}
+        m_TargetAssemblyTypeName: LevelStateSave, Assembly-CSharp
+        m_MethodName: SaveCurrentStateList
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Dad Finished
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1155615467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155615464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e11682616947d742a0925501630dc03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveManager: {fileID: 1905388098}
+  onLevelLoaded:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 665715160}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 847863599}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  keyName: Dad Finished
 --- !u!1 &1177534274
 GameObject:
   m_ObjectHideFlags: 0
@@ -20064,8 +20183,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1905388096}
   - component: {fileID: 1905388097}
+  - component: {fileID: 1905388098}
   m_Layer: 5
-  m_Name: 6 Objective Manager
+  m_Name: 6 Objective & Save Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20107,8 +20227,24 @@ MonoBehaviour:
   goalOngoingTempPrefab: {fileID: 911677030}
   goalCompleteTempPrefab: {fileID: 845069308}
   goalContentParent: {fileID: 1745825800}
+  levelStateSave: {fileID: 1905388098}
   ongoingList: []
   completedList: []
+--- !u!114 &1905388098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905388095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01af32be09a7aaf4b80cb272e514c9f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1598185435}
+  objectList: []
+  levelNum: 1
 --- !u!1 &1912025358
 GameObject:
   m_ObjectHideFlags: 0
