@@ -20,6 +20,7 @@ public class InteractTrigger : MonoBehaviour
             interactButton.onClick.RemoveListener(InteractCall);
 
             interactPrompt.SetActive(true);
+            interactPrompt.transform.position = collision.transform.position + new Vector3(0, 2f, 0);
             interactButton.gameObject.SetActive(true);
             interactButton.onClick.AddListener(InteractCall);
         }
