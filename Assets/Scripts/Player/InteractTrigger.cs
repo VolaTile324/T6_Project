@@ -1,4 +1,4 @@
-using Cainos.PixelArtTopDown_Basic;
+using Hex.TopDownGame;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class InteractTrigger : MonoBehaviour
 {
-    [SerializeField] private TopDownCharacterController character;
+    [SerializeField] private TopDownCharacterController playerCharacter;
     [SerializeField] private GameObject interactPrompt;
     [SerializeField] private Button interactButton;
     [SerializeField] private UnityEvent onInteract;
@@ -44,9 +44,15 @@ public class InteractTrigger : MonoBehaviour
 
     public void InteractCall()
     {
-        if (character.isInteracting == false && interactPrompt.activeSelf)
+        if (playerCharacter.IsInteracting == false && interactPrompt.activeSelf)
         {
+            playerCharacter.Freeze();
             onInteract.Invoke();
         }
+    }
+
+    public void DisableInteracting()
+    {
+        playerCharacter.Unfreeze();
     }
 }
