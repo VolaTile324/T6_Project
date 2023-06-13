@@ -19,10 +19,13 @@ public class LevelStateSave : MonoBehaviour
         if (PlayerPrefs.GetInt(levelNum + "Continue", 0) == 1)
         {
             LoadCurrentStateList();
-            player.transform.position = (new Vector2(
-            PlayerPrefs.GetFloat("PlayerX", player.transform.position.x),
-            PlayerPrefs.GetFloat("PlayerY", player.transform.position.y)
-            ));
+            if (player != null)
+            {
+                player.transform.position = (new Vector2(
+                PlayerPrefs.GetFloat("PlayerX", player.transform.position.x),
+                PlayerPrefs.GetFloat("PlayerY", player.transform.position.y)
+                ));
+            }
         }
         else
         {
@@ -58,8 +61,12 @@ public class LevelStateSave : MonoBehaviour
         PlayerPrefs.SetInt(levelNum + "SavedObjectCount", objectList.Count);
         PlayerPrefs.SetInt(levelNum + "Continue", 1); // 1 = true, 0 = false
 
-        PlayerPrefs.SetFloat("PlayerX", player.transform.position.x);
-        PlayerPrefs.SetFloat("PlayerY", player.transform.position.y);
+        if (player != null)
+        {
+            PlayerPrefs.SetFloat("PlayerX", player.transform.position.x);
+            PlayerPrefs.SetFloat("PlayerY", player.transform.position.y);
+        }
+
         PlayerPrefs.Save();
     }
 }
