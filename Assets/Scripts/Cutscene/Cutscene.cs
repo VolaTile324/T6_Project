@@ -4,6 +4,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Cutscene : MonoBehaviour
 {
@@ -18,6 +20,10 @@ public class Cutscene : MonoBehaviour
 
     [Header("Cutscene Data")]
     [SerializeField] CutsceneData[] cutsceneData;
+
+    [Header("Cutscene Events")]
+    public UnityEvent onCutsceneEnd;
+
     
     //nambah event
     int currentCutsceneIndex = 0;
@@ -75,6 +81,12 @@ public class Cutscene : MonoBehaviour
     {
         BlackFadeIn();
         background.DOFade(0, fadeTime).OnComplete(() => gameObject.SetActive(false));
+        onCutsceneEnd.Invoke();
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 
 }
