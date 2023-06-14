@@ -183,10 +183,10 @@ MonoBehaviour:
   blackFade: {fileID: 546964620}
   fadeTime: 1
   cutsceneData:
-  - text: Apa? Ada percobaan login tanpa izin? Ini tidak baik!
+  - text: 'Oh tidak, ada postingan dan pesan-pesan aneh di Instagramku. '
     background: {fileID: 21300000, guid: 229f58c033d53d545a0d5a9dbe185c56, type: 3}
-  - text: Sepertinya ada seseorang yang mencoba mengakses akunku. Bagaimana bisa
-      ini terjadi?
+  - text: Sepertinya seseorang telah mendapatkan akses tanpa izin ke akunku. Bagaimana
+      bisa ini terjadi?
     background: {fileID: 21300000, guid: 29618b5a27b8f7f47889c1073ab96e31, type: 3}
   - text: Mungkin lebih baik aku bertanya pada kakakku saja, dia pasti tahu akan
       hal ini.
@@ -936,7 +936,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0

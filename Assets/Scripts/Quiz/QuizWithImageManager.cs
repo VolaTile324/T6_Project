@@ -76,20 +76,27 @@ public class QuizWithImageManager : MonoBehaviour
     //lanjut ke soal berikutnya
     public void NextQuestion()
     {
-        currentQuizIndex++;
         feedbackPanel.SetActive(false);
-        if (currentQuizIndex < quizDatasWithImage.Length)
+
+        if (currentQuizIndex < quizDatasWithImage.Length - 1)
         {
+            currentQuizIndex++;
             SetQuiz();
         }
         else
         {
-            Debug.Log("Quiz Finished");
-            quizPromptPanel.SetActive(false);
-            quizStartPanel.SetActive(false);
-            quizFinishPanel.SetActive(true);
-            quizFinishText.text = "You got " + score + " out of " + quizDatasWithImage.Length + " correct!";
+            FinishQuiz();
         }
+    }
+
+    //menampilkan score
+    private void FinishQuiz()
+    {
+        quizPromptPanel.SetActive(false);
+        quizStartPanel.SetActive(false);
+        quizFinishPanel.SetActive(true);
+
+        quizFinishText.text = "Your Score: " + score + " / " + quizDatasWithImage.Length;
     }
 
 }

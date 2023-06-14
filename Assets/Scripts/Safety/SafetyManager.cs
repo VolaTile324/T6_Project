@@ -64,6 +64,16 @@ public class SafetyManager : MonoBehaviour
         return count;
     }
 
+    public void StartQuiz()
+    {
+        quizPromptPanel.SetActive(false);
+    }
+
+    public void RestartQuiz()
+    {
+        quizPromptPanel.SetActive(true);
+    }
+
 
     
     

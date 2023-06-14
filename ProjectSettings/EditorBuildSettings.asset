@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SimpleTest.unity
     guid: 489820574d14d4a469c77a3fdfbd97d9
+  - enabled: 1
+    path: Assets/Scenes/Safety.unity
+    guid: d349e9c53be68e24bb48a71df2c379b0
+  - enabled: 1
+    path: Assets/Scenes/SlideCatch.unity
+    guid: 57abc8bca97d5d448a0358c362337fbb
   m_configObjects: {}
