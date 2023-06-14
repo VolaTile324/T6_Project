@@ -53,6 +53,19 @@ public class ObjectiveList : MonoBehaviour
     public void AddObjective(string objectiveName)
     {
         StopCoroutine(HideAnnouncer());
+        
+        if (ongoingList.Contains(objectiveName))
+        {
+           Debug.Log("Objective already exists..");
+           return;
+        }
+
+        if (completedList.Contains(objectiveName))
+        {
+            Debug.Log("Objective already completed..");
+            return;
+        }
+
         newGoalAnnouncer.SetActive(true);
         goalStatus.text = "New Goal";
         goalName.text = objectiveName;
