@@ -10,6 +10,7 @@ namespace Hex.TopDownGame
     public class TopDownCharacterController : MonoBehaviour
     {
         [SerializeField] private DialogData data;
+        [SerializeField] private Sprite _playerSprite;
         public float speed;
         public VariableJoystick joystick;
         private bool isInteracting = false;
@@ -36,6 +37,8 @@ namespace Hex.TopDownGame
             {
                 plData.characterName = "Doe";
             }
+
+            plData.characterImage = _playerSprite;
         }
 
         public void Freeze()
