@@ -17,14 +17,16 @@ public class EntMessage : MonoBehaviour
 
     private void Update()
     {
-        if (gameObject.activeInHierarchy)
+        transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
+        if (Vector3.Distance(transform.position, initialPos) >= despawnDist)
         {
-            transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
-            if (Vector3.Distance(transform.position, initialPos) >= despawnDist)
-            {
-                Destroy(this.gameObject);
-            }
-        }   
+            Destroy(this.gameObject);
+        }
+
+        if (mg1Manager.StartSpawning == false)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

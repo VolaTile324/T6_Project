@@ -23,7 +23,7 @@ public class SceneController : MonoBehaviour
 
     public void PauseGame()
     {
-        if (Time.timeScale == 1)
+        if (Time.timeScale > 0)
         {
             Time.timeScale = 0;
         }
