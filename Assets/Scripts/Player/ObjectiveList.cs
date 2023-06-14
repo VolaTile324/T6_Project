@@ -18,6 +18,8 @@ public class ObjectiveList : MonoBehaviour
     private int savedOngoingCount;
     private int savedCompletedCount;
 
+    public List<string> CompletedList { get => completedList; set => completedList = value; }
+
     private void Awake()
     {
         if (PlayerPrefs.GetInt(levelStateSave.LevelNum + "Continue", 0) == 1)
