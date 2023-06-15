@@ -18,8 +18,7 @@ public class SafetyManager : MonoBehaviour
 
     [SerializeField] GameObject quizPromptPanel;
 
-    [SerializeField] UnityEvent OnSuccess;
-
+    public UnityEvent OnWin;
     private void Start() {
         resultPanel.SetActive(false);
         // quizPromptPanel.SetActive(value: true);
@@ -51,8 +50,8 @@ public class SafetyManager : MonoBehaviour
         if (allLocked)
         {
             resultPanel.SetActive(true);
-            resultText.text = "Kamu berhasil!";
-            OnSuccess.Invoke();
+            resultText.text = "Selamat!\nKamu berhasil melindungi seluruh perangkatmu";
+            OnWin.Invoke();
         }
 
         // check if one of the HP bar value is 0, then show result panel "kamu gagal melindungi perangkatmu"
