@@ -6,10 +6,9 @@ using UnityEngine;
 public class QuizDataWithImage 
 {
     public string question;
-    public Sprite questionImage;
     public string[] answers;
     public Sprite[] answerImages;
-    public int correctAnswer;
+    public int[] correctAnswer;
     public string[] feedbacks;
 }
 

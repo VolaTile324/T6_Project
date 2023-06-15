@@ -14,7 +14,6 @@ public class QuizWithImageManager : MonoBehaviour
     [SerializeField] GameObject feedbackPanel;
     [SerializeField] TMP_Text feedbackText;
     [SerializeField] TMP_Text questionText;
-    [SerializeField] Image questionImage;
     [SerializeField] TMP_Text[] answerTexts;
     [SerializeField] Image[] answerImages;
     [SerializeField] TMP_Text quizFinishText;
@@ -23,7 +22,7 @@ public class QuizWithImageManager : MonoBehaviour
     public QuizDataWithImage[] quizDatasWithImage;
 
     private int currentQuizIndex;
-    private int correctAnswer;
+    private int[] correctAnswer;
     private int score;
 
     private void OnEnable()
@@ -46,20 +45,21 @@ public class QuizWithImageManager : MonoBehaviour
     private void SetQuiz()
     {
         questionText.text = quizDatasWithImage[currentQuizIndex].question;
-        questionImage.sprite = quizDatasWithImage[currentQuizIndex].questionImage;
         
         for (int i = 0; i < answerTexts.Length; i++)
         {
             answerTexts[i].text = quizDatasWithImage[currentQuizIndex].answers[i];
             answerImages[i].sprite = quizDatasWithImage[currentQuizIndex].answerImages[i];
         }
+        // jawaban benar bisa ada dua
         correctAnswer = quizDatasWithImage[currentQuizIndex].correctAnswer;
+
     }
 
     //cek jawaban, setiap pilihan jawaban memiliki feedback masing" jd pada string feedbacks itu ada 4 feedback
     public void CheckAnswer(int answerIndex)
     {
-        if (answerIndex == correctAnswer)
+        if (answerIndex == quizDatasWithImage[currentQuizIndex].correctAnswer[0] || answerIndex == quizDatasWithImage[currentQuizIndex].correctAnswer[1])
         {
             Debug.Log("Correct");
             score++;
@@ -96,7 +96,14 @@ public class QuizWithImageManager : MonoBehaviour
         quizStartPanel.SetActive(false);
         quizFinishPanel.SetActive(true);
 
-        quizFinishText.text = "Your Score: " + score + " / " + quizDatasWithImage.Length;
+        quizFinishText.text = "Skor: " + score + " / " + quizDatasWithImage.Length;
+    }
+
+    public void RetryQuiz()
+    {
+        quizPromptPanel.SetActive(true);
+        quizStartPanel.SetActive(false);
+        quizFinishPanel.SetActive(false);
     }
 
 }

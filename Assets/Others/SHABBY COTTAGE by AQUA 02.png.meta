@@ -154,9 +154,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 533
-        y: 670
+        y: 677
         width: 37
-        height: 18
+        height: 11
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -611,6 +611,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: SHABBY COTTAGE by AQUA 02_23
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 670
+        width: 37
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a11bf988f0a2a1b48bb8668d7cd14284
+      internalID: 1660870090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -638,6 +659,7 @@ TextureImporter:
       SHABBY COTTAGE by AQUA 02_20: 267665910
       SHABBY COTTAGE by AQUA 02_21: 767572742
       SHABBY COTTAGE by AQUA 02_22: 1917566698
+      SHABBY COTTAGE by AQUA 02_23: 1660870090
       SHABBY COTTAGE by AQUA 02_3: 594176345
       SHABBY COTTAGE by AQUA 02_4: -238215987
       SHABBY COTTAGE by AQUA 02_5: 1915131792
