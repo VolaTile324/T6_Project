@@ -10,6 +10,7 @@ public class SafetyManager : MonoBehaviour
     // [SerializeField] Device[] Devices;
     [SerializeField] GameObject[] Locks;
     [SerializeField] TMP_Text lockText;
+    [SerializeField] GameObject[] interactableObjects;
 
     [SerializeField] GameObject resultPanel;
     [SerializeField] TMP_Text resultText;
@@ -30,6 +31,7 @@ public class SafetyManager : MonoBehaviour
                 HPBar[i].gameObject.SetActive(false);
                 Locks[i].SetActive(true);
                 lockText.text = CountLockedDevices() + " / " + Locks.Length;
+                interactableObjects[i].SetActive(false);
             }
         }     
 
@@ -46,7 +48,23 @@ public class SafetyManager : MonoBehaviour
         if (allLocked)
         {
             resultPanel.SetActive(true);
-            resultText.text = "You have successfully secured all devices!";
+            resultText.text = "Kamu berhasil !";
+        }
+
+        // check if one of the HP bar value is 0, then show result panel "kamu gagal melindungi perangkatmu"
+        bool oneHPBarZero = false;
+        for (int i = 0; i < HPBar.Length; i++)
+        {
+            if (HPBar[i].value == 0)
+            {
+                oneHPBarZero = true;
+            }
+        }
+
+        if (oneHPBarZero)
+        {
+            resultPanel.SetActive(true);
+            resultText.text = "Kamu gagal melindungi perangkatmu";
         }
         
     }
@@ -64,8 +82,14 @@ public class SafetyManager : MonoBehaviour
         return count;
     }
 
+    public void StartQuiz()
+    {
+        quizPromptPanel.SetActive(false);
+    }
 
-    
-    
+    public void RestartQuiz()
+    {
+        quizPromptPanel.SetActive(true);
+    }
 
 }

@@ -133,9 +133,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 344
-        y: 434
+        y: 432
         width: 40
-        height: 87
+        height: 89
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,9 +154,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 288
-        y: 434
+        y: 432
         width: 40
-        height: 87
+        height: 89
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -494,7 +494,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -515,7 +515,7 @@ TextureImporter:
         width: 23
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -536,7 +536,7 @@ TextureImporter:
         width: 42
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -544,6 +544,216 @@ TextureImporter:
       bones: []
       spriteID: 6b1e5f6bbb7d0e84b81d722e89baff46
       internalID: -317433894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SHABBY COTTAGE by AQUA 01_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 336
+        width: 48
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b792dd7b1168f4d8139cb2c4f42554
+      internalID: -1656191614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SHABBY COTTAGE by AQUA 01_21
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 336
+        width: 48
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72e299ba6d15e7741b02299d15952a68
+      internalID: -464294199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SHABBY COTTAGE by AQUA 01_22
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 480
+        width: 92
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 906d50a72a9eedd49a866fd22395aa1b
+      internalID: -1778395288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SHABBY COTTAGE by AQUA 01_23
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 432
+        width: 92
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f421d55e48c45fa429a86b5918d2c3d8
+      internalID: 797443252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SHABBY COTTAGE by AQUA 01_24
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 383
+        width: 96
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b968d9e146b0d6449846bc0934d29ea
+      internalID: 1404158630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SHABBY COTTAGE by AQUA 01_25
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 336
+        width: 96
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ce31c43d19adfd4b9a1158437c4b115
+      internalID: -1892898044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SHABBY COTTAGE by AQUA 01_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 95
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27f967a7c7c7f6d4e954228a8d6e058f
+      internalID: 1772160760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SHABBY COTTAGE by AQUA 01_27
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 192
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54b85af9ffbbb594d8a1590ef0446600
+      internalID: -345455136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SHABBY COTTAGE by AQUA 01_28
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8b08e152bdcd1a438f3ad80c7c6c7fe
+      internalID: 1067338925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SHABBY COTTAGE by AQUA 01_29
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 336
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe8ccd6762ac4f24db0f217b3a5a0b25
+      internalID: 424245615
       vertices: []
       indices: 
       edges: []
@@ -572,6 +782,16 @@ TextureImporter:
       SHABBY COTTAGE by AQUA 01_18: -260372480
       SHABBY COTTAGE by AQUA 01_19: -317433894
       SHABBY COTTAGE by AQUA 01_2: 787729447
+      SHABBY COTTAGE by AQUA 01_20: -1656191614
+      SHABBY COTTAGE by AQUA 01_21: -464294199
+      SHABBY COTTAGE by AQUA 01_22: -1778395288
+      SHABBY COTTAGE by AQUA 01_23: 797443252
+      SHABBY COTTAGE by AQUA 01_24: 1404158630
+      SHABBY COTTAGE by AQUA 01_25: -1892898044
+      SHABBY COTTAGE by AQUA 01_26: 1772160760
+      SHABBY COTTAGE by AQUA 01_27: -345455136
+      SHABBY COTTAGE by AQUA 01_28: 1067338925
+      SHABBY COTTAGE by AQUA 01_29: 424245615
       SHABBY COTTAGE by AQUA 01_3: 1233567318
       SHABBY COTTAGE by AQUA 01_4: -1891725116
       SHABBY COTTAGE by AQUA 01_5: 1937444073

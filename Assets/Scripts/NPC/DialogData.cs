@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class DialogData
 {
     public string characterName;
-
+    public Sprite characterImage;
+    public Sprite backgroundImage;
     public DialogText[] texts;
 }

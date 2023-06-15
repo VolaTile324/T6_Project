@@ -53,8 +53,21 @@ public class ObjectiveList : MonoBehaviour
     public void AddObjective(string objectiveName)
     {
         StopCoroutine(HideAnnouncer());
+        
+        if (ongoingList.Contains(objectiveName))
+        {
+           Debug.Log("Objective already exists..");
+           return;
+        }
+
+        if (completedList.Contains(objectiveName))
+        {
+            Debug.Log("Objective already completed..");
+            return;
+        }
+
         newGoalAnnouncer.SetActive(true);
-        goalStatus.text = "New Goal";
+        goalStatus.text = "Objektif Baru";
         goalName.text = objectiveName;
         StartCoroutine(HideAnnouncer());
         // add into list
@@ -70,7 +83,7 @@ public class ObjectiveList : MonoBehaviour
         {
             StopCoroutine(HideAnnouncer());
             newGoalAnnouncer.SetActive(true);
-            goalStatus.text = "Goal Achieved";
+            goalStatus.text = "Objektif Selesai";
             goalName.text = objectiveName;
             StartCoroutine(HideAnnouncer());
 

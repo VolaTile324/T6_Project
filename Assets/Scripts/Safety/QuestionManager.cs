@@ -17,20 +17,16 @@ public class QuestionManager : MonoBehaviour
 
     public UnityEvent OnClosePanel;
     private void Start() {
-        StartQuestion();
+        QuestionPanel.SetActive(false);
     }
 
     public void StartQuestion() {
         QuestionPanel.SetActive(true);
+        CurrentQuestionIndex = Random.Range(0, Questions.Length);
         SetQuestion();
     }
 
     public void SetQuestion() {
-        int randomIndex = Random.Range(CurrentQuestionIndex, Questions.Length);
-        QuestionData temp = Questions[CurrentQuestionIndex];
-        Questions[CurrentQuestionIndex] = Questions[randomIndex];
-        Questions[randomIndex] = temp;
-
         for (int i = 0; i < AnswerTexts.Length; i++)
         {
             AnswerTexts[i].text = Questions[CurrentQuestionIndex].Answers[i];
