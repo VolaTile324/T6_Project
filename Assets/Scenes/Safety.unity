@@ -4014,7 +4014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01af32be09a7aaf4b80cb272e514c9f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1677636796}
+  player: {fileID: 0}
   objectList: []
   levelNum: 1
 --- !u!114 &518549851
@@ -4534,6 +4534,21 @@ MonoBehaviour:
   resultPanel: {fileID: 23804690}
   resultText: {fileID: 2047381459}
   quizPromptPanel: {fileID: 856276650}
+  OnSuccess:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 518549851}
+        m_TargetAssemblyTypeName: ObjectiveList, Assembly-CSharp
+        m_MethodName: CompleteObjective
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Mainkan Safety Key
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &617315728
 Transform:
   m_ObjectHideFlags: 0

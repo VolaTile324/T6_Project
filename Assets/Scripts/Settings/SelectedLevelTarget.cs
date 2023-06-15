@@ -22,15 +22,26 @@ public class SelectedLevelTarget : MonoBehaviour
         selectedLevelTemplate.LevelName.text = targetLevelName.text;
         selectedLevelTemplate.LevelDescription.text = levelDesc;
         
-        selectedLevelTemplate.LoadLevelButton.onClick.RemoveAllListeners();
-        selectedLevelTemplate.LoadLevelButton.onClick.AddListener(SceneNumSet);
+        if (PlayerPrefs.GetInt(targetLevel + "Continue", 0) == 0)
+        {
+            selectedLevelTemplate.LoadLevelButton.onClick.RemoveAllListeners();
+            selectedLevelTemplate.LoadLevelButton.onClick.AddListener(SceneNumSetNew);
+        }
+
         if (PlayerPrefs.GetInt(targetLevel + "Continue", 0) == 1)
         {
+            selectedLevelTemplate.LoadLevelButton.onClick.RemoveAllListeners();
+            selectedLevelTemplate.LoadLevelButton.onClick.AddListener(SceneNumSet);
             selectedLevelTemplate.RestartButton.gameObject.SetActive(true);
             selectedLevelTemplate.RestartAcceptButton.onClick.RemoveAllListeners();
             selectedLevelTemplate.RestartAcceptButton.onClick.AddListener(ResetLevel);
             selectedLevelTemplate.LoadLevelButton.GetComponentInChildren<TMP_Text>().text = "CONTINUE";
         }
+    }
+
+    public void SceneNumSetNew()
+    {
+        levelLoader.LoadLevel("Cutscene Level " + targetLevel);
     }
 
     public void SceneNumSet()
@@ -41,6 +52,6 @@ public class SelectedLevelTarget : MonoBehaviour
     public void ResetLevel()
     {
         PlayerPrefs.SetInt(targetLevel + "Continue", 0);
-        SceneNumSet();
+        SceneNumSetNew();
     }
 }
