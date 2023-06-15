@@ -67,7 +67,7 @@ public class ObjectiveList : MonoBehaviour
         }
 
         newGoalAnnouncer.SetActive(true);
-        goalStatus.text = "New Goal";
+        goalStatus.text = "Objektif Baru";
         goalName.text = objectiveName;
         StartCoroutine(HideAnnouncer());
         // add into list
@@ -83,7 +83,7 @@ public class ObjectiveList : MonoBehaviour
         {
             StopCoroutine(HideAnnouncer());
             newGoalAnnouncer.SetActive(true);
-            goalStatus.text = "Goal Achieved";
+            goalStatus.text = "Objektif Selesai";
             goalName.text = objectiveName;
             StartCoroutine(HideAnnouncer());
 

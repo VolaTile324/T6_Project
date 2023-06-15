@@ -90,6 +90,10 @@ public class DialogueManager : MonoBehaviour
         {
             _dialogText.text = DialogData.texts[dialogIndex].text;
             _dialogNameText.text = DialogData.texts[dialogIndex].isPlayer ? player.plData.characterName : DialogData.characterName;
+            _playerImage.sprite = DialogData.texts[dialogIndex].isPlayer ? player.plData.characterImage : player.plData.characterImage;
+            _playerImage.DOFade(DialogData.texts[dialogIndex].isPlayer ? 1 : 0, 0.5f);
+            _NPCImage.sprite = DialogData.texts[dialogIndex].isPlayer ? DialogData.characterImage : DialogData.characterImage;
+            _NPCImage.DOFade(DialogData.texts[dialogIndex].isPlayer ? 0 : 1, 0.5f);
             if (DialogData.texts[dialogIndex].isQuestion)
             {
                 QuestionButtons(dialogIndex);
