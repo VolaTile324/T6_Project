@@ -150,27 +150,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SHABBY COTTAGE by AQUA 02_1
-      rect:
-        serializedVersion: 2
-        x: 533
-        y: 677
-        width: 37
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 43db538ce9e47894cadc3162a88867c3
-      internalID: 111140428
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: SHABBY COTTAGE by AQUA 02_2
       rect:
         serializedVersion: 2
@@ -616,9 +595,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 533
-        y: 670
+        y: 672
         width: 37
-        height: 7
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
