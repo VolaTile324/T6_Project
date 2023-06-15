@@ -5,10 +5,11 @@ using UnityEngine.Events;
 
 public class ObjectiveChecklist : MonoBehaviour
 {
+    [SerializeField] LevelStateSave levelStateSave;
     [SerializeField] ObjectiveList objectiveList;
     [SerializeField] UnityEvent checkListTrigger;
     [SerializeField] List<string> checkListNames;
-    private int checkListCondition;
+    private int checkListCondition = 0;
 
     // Start is called before the first frame update
     void Start()

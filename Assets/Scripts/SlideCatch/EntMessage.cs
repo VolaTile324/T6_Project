@@ -44,7 +44,7 @@ public class EntMessage : MonoBehaviour
 
     private void AddPoint()
     {
-        mg1Manager.MessageNum++;
+        mg1Manager.MessageNum += messageValue;
         Destroy(this.gameObject);
     }
 }

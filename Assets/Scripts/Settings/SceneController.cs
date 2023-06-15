@@ -35,9 +35,18 @@ public class SceneController : MonoBehaviour
 
     public void ToggleHUD(bool value)
     {
-        pauseButton.gameObject.SetActive(value);
-        joystick.gameObject.SetActive(value);
-        interactButton.gameObject.SetActive(value);
+        if (pauseButton != null)
+        {
+            pauseButton.gameObject.SetActive(value);
+        }
+        if (joystick != null)
+        {
+            joystick.gameObject.SetActive(value);
+        }
+        if (interactButton != null)
+        {
+            interactButton.gameObject.SetActive(value);
+        }
     }
 
     public void QuitGame()

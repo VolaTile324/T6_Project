@@ -53,6 +53,12 @@ public class LevelStateSave : MonoBehaviour
     }
     public void SaveCurrentStateList(string objName)
     {
+        if (objectList.Contains(objName))
+        {
+            Debug.Log("Object state already exists..");
+            return;
+        }
+        
         objectList.Add(objName);
         for (int i = 0; i < objectList.Count; i++)
         {
