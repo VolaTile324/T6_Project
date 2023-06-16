@@ -19,7 +19,7 @@ public class QuizPrompt : MonoBehaviour
 
     public UnityEvent onPromptEnd;
 
-    private void Start() {
+    private void OnEnable() {
         currentPromptIndex = 0;
         StartPrompt();
     }
