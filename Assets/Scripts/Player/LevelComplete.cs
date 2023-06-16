@@ -24,12 +24,15 @@ public class LevelComplete : MonoBehaviour
         sceneController.ToggleHUD(false);
         fadeEffect.gameObject.SetActive(true);
         fadeEffect.StartFadeIn();
-        Invoke("EnableFinishedPanel", 1);
+        StartCoroutine(EnableFinishedPanelAfterFade());
     }
 
-    private void EnableFinishedPanel()
+    IEnumerator EnableFinishedPanelAfterFade()
     {
+        yield return new WaitForSecondsRealtime(1.5f);
+        fadeEffect.StartFadeOut();
         summaryBox.text = summaryInfo;
         finishedPanel.gameObject.SetActive(true);
+        StopAllCoroutines();
     }
 }

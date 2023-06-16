@@ -31,5 +31,9 @@ public class ObjectiveChecklist : MonoBehaviour
         {
             checkListTrigger.Invoke();
         }
+        else
+        {
+            Debug.Log("checklist did not meet the condition!");
+        }
     }
 }
