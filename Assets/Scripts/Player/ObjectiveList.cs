@@ -15,6 +15,7 @@ public class ObjectiveList : MonoBehaviour
     [SerializeField] private LevelStateSave levelStateSave;
     [SerializeField] List<string> ongoingList;
     [SerializeField] List<string> completedList;
+    [SerializeField] AudioSource goalCompleteSound;
     private int savedOngoingCount;
     private int savedCompletedCount;
 
@@ -101,6 +102,7 @@ public class ObjectiveList : MonoBehaviour
 
             // save the list
             SaveList();
+            goalCompleteSound.Play();
         }
         else
         {
